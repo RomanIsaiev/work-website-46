@@ -3,19 +3,31 @@
 .options-list {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
 }
 
 .options-list .list-item {
   background: #fff;
   margin-bottom: 20px;
   @include mx.adaptive("width", 380, 345, 0);
+  margin: 0 auto;
 
   .item-wrapper {
     border-radius: 20px 20px 20px 20px;
     padding-bottom: 30px;
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .options-list {
+    flex-direction: unset;
+  }
+
+  .options-list .list-item {
+    margin: unset;
   }
 }
 
@@ -261,7 +273,7 @@
   }
 }
 
-.options-list .list-item:nth-child(2) {
+.options-list .list-item:nth-child(3) {
   .item-title-box {
     background: #f2e5ff;
   }
@@ -309,7 +321,7 @@
   }
 }
 
-.options-list .list-item:nth-child(3) {
+.options-list .list-item:nth-child(5) {
   .item-title-box {
     background: #e2f6d3;
   }

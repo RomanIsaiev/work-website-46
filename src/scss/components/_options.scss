@@ -2,6 +2,7 @@
 
 .options {
   @include mx.adaptive("padding-top", 70, 50, 0);
+  padding-bottom: 100px;
 }
 
 .title-container {
@@ -47,8 +48,17 @@
   }
 }
 
-.options-list {
+.mobile-decoration-image {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.options-list .list-item {
+@media screen and (min-width: 999px) {
+  .mobile-decoration-image {
+    display: none;
+  }
+}
+
+.bonus .title {
+  @include mx.adaptive("width", 240, 135, 0);
 }
