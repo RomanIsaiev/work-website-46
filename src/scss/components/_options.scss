@@ -1,13 +1,49 @@
 @use "../utils/mixins" as mx;
 
 .options {
+  @include mx.adaptive("padding-top", 70, 50, 0);
 }
 
 .title-container {
+  padding: 20px 28px;
+  border-radius: 20px;
+  background: #fff4f7;
+
+  @include mx.adaptive("width", 1220, 345, 0);
+  @include mx.adaptive("margin-bottom", 30, 20, 0);
+
   .title {
+    color: #ff6d90;
+    text-align: center;
+    font-family: "Bebas Neue Cyrillic";
+    @include mx.adaptive("font-size", 96, 54, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mx.adaptive("width", 514, 289, 0);
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-bottom: 20px;
+
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid #ffd4df;
+    }
   }
 
   .title-image {
+    display: none;
+  }
+
+  @media screen and (max-width: 768px) {
+    .title-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

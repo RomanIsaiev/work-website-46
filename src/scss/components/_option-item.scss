@@ -1,0 +1,358 @@
+@use "../utils/mixins" as mx;
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.options-list .list-item {
+  background: #fff;
+  margin-bottom: 20px;
+  @include mx.adaptive("width", 380, 345, 0);
+
+  .item-wrapper {
+    border-radius: 20px 20px 20px 20px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.options-list .item-title-box {
+  position: relative;
+  @include mx.adaptive("height", 118, 97, 0);
+  padding: 20px;
+  border-radius: 20px 20px 0px 0px;
+  margin-bottom: 30px;
+}
+
+.options-list {
+  .title-face {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .item-title {
+    color: #202020;
+    text-align: center;
+    font-family: "Bebas Neue Cyrillic";
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 43.2px */
+    text-transform: uppercase;
+  }
+
+  .item-subtitle {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 18, 16, 0);
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 19.2px */
+    letter-spacing: -0.16px;
+    text-transform: lowercase;
+
+    padding: 6px 20px;
+  }
+}
+
+.option-lists-container {
+  padding: 0 30px;
+}
+
+.get-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: disc;
+  padding-left: 25px;
+  margin-bottom: 30px;
+
+  .get-item {
+    color: #afafaf;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 18, 15, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+.modules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: disc;
+  padding-left: 25px;
+
+  .modules-item {
+    color: #afafaf;
+    font-family: "Futura PT";
+    @include mx.adaptive("font-size", 18, 15, 0);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.3px;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  .price-item {
+    border-radius: 15px;
+    padding: 20px;
+    @include mx.adaptive("width", 380, 345, 0);
+  }
+
+  .price-title {
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 24px */
+    letter-spacing: -0.6px;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+  }
+
+  .old-price {
+    display: block;
+
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 48px */
+    letter-spacing: -2.8px;
+    text-transform: uppercase;
+    text-decoration: line-through;
+  }
+
+  .price-accent {
+    display: block;
+    color: #202020;
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 100%; /* 48px */
+    letter-spacing: -2.8px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+  }
+
+  .payment-calc {
+    text-align: center;
+    font-family: "Futura PT";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 24px */
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.option-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-family: "Futura PT";
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%; /* 16px */
+  text-transform: uppercase;
+  border-radius: 100px;
+
+  display: block;
+  @include mx.adaptive("width", 380, 345, 0);
+}
+
+.pay {
+  height: 51px;
+  color: #fff;
+  @include mx.adaptive("font-size", 18, 16, 0);
+  background: #ff6d90;
+}
+
+.reserv {
+  height: 39px;
+  color: #ff6d90;
+  font-size: 14px;
+  border: 1px solid #ff6d90;
+}
+
+.options-list .list-item:nth-child(1) {
+  .item-title-box {
+    background: #e1ebff;
+  }
+
+  .item-subtitle {
+    border-radius: 5px;
+    background: #84aeff;
+  }
+
+  .option-title-box {
+    width: 120px;
+    margin-left: 80px;
+  }
+
+  .item-wrapper {
+    border: 2px solid #e1ebff;
+  }
+
+  .get-list .get-item:nth-child(-n + 2) {
+    color: #202020;
+  }
+
+  .modules-list .modules-item:nth-child(-n + 9) {
+    color: #202020;
+  }
+
+  .price-list .price-item:nth-child(-n + 2) {
+    background: #e1ebff;
+  }
+
+  .price-list .price-item:last-child {
+    border: 2px solid #84aeff;
+  }
+
+  .price-title {
+    color: #84aeff;
+  }
+
+  .old-price {
+    color: #84aeff;
+  }
+
+  .payment-calc {
+    color: #84aeff;
+  }
+}
+
+.options-list .list-item:nth-child(2) {
+  .item-title-box {
+    background: #f2e5ff;
+  }
+
+  .item-subtitle {
+    border-radius: 5px;
+    background: #c997fc;
+  }
+
+  .option-title-box {
+    width: 108px;
+    margin-left: 80px;
+  }
+
+  .item-wrapper {
+    border: 2px solid #f2e5ff;
+  }
+
+  .get-list .get-item:nth-child(-n + 4) {
+    color: #202020;
+  }
+
+  .modules-list .modules-item:nth-child(-n + 11) {
+    color: #202020;
+  }
+
+  .price-list .price-item:nth-child(-n + 2) {
+    background: #f2e5ff;
+  }
+
+  .price-list .price-item:last-child {
+    border: 2px solid #c997fc;
+  }
+
+  .price-title {
+    color: #c997fc;
+  }
+
+  .old-price {
+    color: #c997fc;
+  }
+
+  .payment-calc {
+    color: #c997fc;
+  }
+}
+
+.options-list .list-item:nth-child(3) {
+  .item-title-box {
+    background: #e2f6d3;
+  }
+
+  .item-subtitle {
+    border-radius: 5px;
+    background: #afdc8b;
+  }
+
+  .option-title-box {
+    width: 144px;
+    margin-left: 80px;
+  }
+
+  .item-wrapper {
+    border: 2px solid #e2f6d3;
+  }
+
+  .get-list .get-item:nth-child(-n + 4) {
+    color: #202020;
+  }
+
+  .modules-list .modules-item:nth-child(-n + 13) {
+    color: #202020;
+  }
+
+  .price-list .price-item:nth-child(-n + 2) {
+    background: #e2f6d3;
+  }
+
+  .price-list .price-item:last-child {
+    border: 2px solid #afdc8b;
+  }
+
+  .price-title {
+    color: #afdc8b;
+  }
+
+  .old-price {
+    color: #afdc8b;
+  }
+
+  .payment-calc {
+    color: #afdc8b;
+  }
+}
