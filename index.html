@@ -144,8 +144,14 @@
                 </li>
               </ul>
               <div class="buttons-container">
-                <button class="option-btn pay" type="button">Оплатити</button>
-                <button class="option-btn reserv" type="button">
+                <button class="option-btn pay" type="button" solo-modal-open>
+                  Оплатити
+                </button>
+                <button
+                  class="option-btn reserv"
+                  type="button"
+                  reserv-modal-open
+                >
                   забронювати
                 </button>
               </div>
@@ -279,8 +285,14 @@
                 </li>
               </ul>
               <div class="buttons-container">
-                <button class="option-btn pay" type="button">Оплатити</button>
-                <button class="option-btn reserv" type="button">
+                <button class="option-btn pay" type="button" party-modal-open>
+                  Оплатити
+                </button>
+                <button
+                  class="option-btn reserv"
+                  type="button"
+                  reserv-modal-open
+                >
                   забронювати
                 </button>
               </div>
@@ -414,8 +426,18 @@
                 </li>
               </ul>
               <div class="buttons-container">
-                <button class="option-btn pay" type="button">Оплатити</button>
-                <button class="option-btn reserv" type="button">
+                <button
+                  class="option-btn pay"
+                  type="button"
+                  personal-modal-open
+                >
+                  Оплатити
+                </button>
+                <button
+                  class="option-btn reserv"
+                  type="button"
+                  reserv-modal-open
+                >
                   забронювати
                 </button>
               </div>
@@ -569,6 +591,75 @@
         </div>
       </section>
     </main>
+    <!-- solo modal -->
+    <div class="backdrop is-hidden" solo-modal>
+      <div class="modal">
+        <button type="button" class="close-button" solo-modal-close>
+          <img
+            src="./src/img/close-modal-icon.svg"
+            width="40"
+            height="40"
+            alt="close"
+          />
+        </button>
+        <script
+          type="module"
+          src="https://kwiga.com/build/js/kwiga-widget.js?t=1717241708000&uuid=bcce3ebd-4d3a-4bbe-8e9b-f3ee3b0ba6cc&producer=https://kwiga.com/"
+        ></script>
+      </div>
+    </div>
+    <!-- party modal -->
+    <div class="backdrop is-hidden" party-modal>
+      <div class="modal">
+        <button type="button" class="close-button" party-modal-close>
+          <img
+            src="./src/img/close-modal-icon.svg"
+            width="40"
+            height="40"
+            alt="close"
+          />
+        </button>
+        <script
+          type="module"
+          src="https://kwiga.com/build/js/kwiga-widget.js?t=1717241759000&uuid=8f322c5d-8631-4e58-8ede-9784be9fe0d9&producer=https://kwiga.com/"
+        ></script>
+      </div>
+    </div>
+    <!-- personal modal -->
+    <div class="backdrop is-hidden" personal-modal>
+      <div class="modal">
+        <button type="button" class="close-button" personal-modal-close>
+          <img
+            src="./src/img/close-modal-icon.svg"
+            width="40"
+            height="40"
+            alt="close"
+          />
+        </button>
+        <script
+          type="module"
+          src="https://kwiga.com/build/js/kwiga-widget.js?t=1717241811000&uuid=26172bef-962d-4248-81ef-80fdccf38de9&producer=https://kwiga.com/"
+        ></script>
+      </div>
+    </div>
+    <!-- reserv modal -->
+    <div class="backdrop is-hidden" reserv-modal>
+      <div class="modal">
+        <button type="button" class="close-button" reserv-modal-close>
+          <img
+            src="./src/img/close-modal-icon.svg"
+            width="40"
+            height="40"
+            alt="close"
+          />
+        </button>
+        <script
+          type="module"
+          src="https://kwiga.com/build/js/kwiga-widget.js?t=1717242659000&uuid=2dea866f-8f51-443b-9669-364071021510&producer=https://kwiga.com/"
+        ></script>
+      </div>
+    </div>
     <script type="module" src="./src/js/main.js"></script>
+    <script type="module" src="/src/js/js-modal.js"></script>
   </body>
 </html>
