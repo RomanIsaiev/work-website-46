@@ -1,17 +1,19 @@
 @use "../utils/mixins" as mx;
 
+$max-width-item: 370;
+
 .options-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  gap: 40px;
+  gap: 20px;
 }
 
 .options-list .list-item {
   background: #fff;
   margin-bottom: 20px;
-  @include mx.adaptive("width", 380, 345, 0);
+  @include mx.adaptive("width", $max-width-item, 345, 0);
   margin: 0 auto;
 
   .item-wrapper {
@@ -131,7 +133,7 @@
   .price-item {
     border-radius: 15px;
     padding: 20px;
-    @include mx.adaptive("width", 380, 345, 0);
+    @include mx.adaptive("width", $max-width-item, 345, 0);
   }
 
   .price-title {
@@ -208,7 +210,7 @@
   border-radius: 100px;
 
   display: block;
-  @include mx.adaptive("width", 380, 345, 0);
+  @include mx.adaptive("width", $max-width-item, 345, 0);
 }
 
 .pay {
